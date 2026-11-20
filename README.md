@@ -1,11 +1,52 @@
-# One day in the world — 19 November 2026
+# The World in One Day — 19 November 2026
 
-[![make.fun · news-image-20261119](https://make.fun/badge/news-image-20261119.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
-[![rank](https://make.fun/badge/news-image-20261119/lions0810/news-image-20261119/rank.svg)](https://make.fun/bounty/news-image-20261119/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
-[![reward](https://make.fun/badge/news-image-20261119/lions0810/news-image-20261119/reward.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
+[![make.fun](https://make.fun/badge/news-image-20261119.svg)](https://make.fun/bounty/news-image-20261119)
+[![make.fun](https://make.fun/badge/news-image-20261119/entries.svg)](https://make.fun/bounty/news-image-20261119)
+[![make.fun](https://make.fun/badge/news-image-20261119/prize.svg)](https://make.fun/bounty/news-image-20261119)
 
-Entry to make.fun's news-image-20261119 bounty: sum up 19 November 2026's world news in a single 1024×1024 image. The design is a newspaper front page — a black masthead with the date and a visible date check, four illustrated panels with rendered captions, a "THE DAY IN UTC" strip of six moments with their real wire timestamps, and a "MORE FROM THE DAY" list of 34 more stories in two columns: 44 stories in all.
+A one-page newspaper front page for Thursday 19 November 2026, built
+for the [news-image-20261119](https://make.fun/bounty/news-image-20261119)
+bounty on make.fun.
 
-The four lead stories are: GTA VI launches worldwide to rave reviews, with 2.3 million watching on Twitch; Trump, Xi and Putin issue a "peace declaration" at their first trilateral summit in Shenzhen; the World Court rules Myanmar committed genocide against the Rohingya; and three oil tankers catch fire after hitting mines east of the Strait of Hormuz. The UTC strip runs from 21:21 (Europe open to Russia talks) to 23:51 (Trump pardons Pete Rose). The 34 more cover the Crimea Bridge attack, the Houthi strike on Riyadh's tallest tower, the Bangladesh violence, COP31 in Antalya, the IEA's Hormuz warning, the record $190.4m Van Gogh sale, Kuwait repelling an Iranian attack, the EU's €45bn Ukraine loan, the US–Venezuela military deal, Israel's Gaza ground operation, the Senate war-powers vote, Jeffries set to be the first Black House Speaker, the Korean ex-PM retrial, the Rakuten breach, the Pacific deep-sea mining auction, the Kyiv drone swarm, Cyclone Akvan's evacuation, and Fiona the hippo — every item sourced from reporting of Thursday 19 November 2026.
+## What is on the page
 
-The four illustrations are AI-generated editorial images composed with Pillow (`compose.py`); every word on the page is rendered text, never part of the illustrations. `main.py` copies the finished `entry.png` to the output directory — deterministic, byte-identical on every run, and it verifies the copy before reporting success.
+The front page covers the day in 44 stories:
+
+- **Four illustrated leads** — GTA VI launch day, the first-ever
+  Trump–Xi–Putin trilateral summit in Shenzhen, the World Court ruling
+  that Myanmar committed genocide against the Rohingya, and three oil
+  tankers ablaze after striking mines east of the Strait of Hormuz.
+- **A UTC timeline strip** — six moments from the day, from the
+  early-hours conflict-zone figures to the late-night word from
+  Washington on Iran.
+- **More from the day** — 34 further stories in two columns, from the
+  Crimean Bridge strike and Wall Street's fifth straight fall to
+  Voyager 1 reaching one light-day from Earth.
+
+Every headline was written for this edition from the day's reporting;
+the four illustrations are the panels in `panels/`.
+
+## Files
+
+- `entry.png` — the finished 1024×1024 front page (the entry itself).
+- `compose.py` — the renderer that draws the page with Pillow:
+  masthead, 2×2 illustrated leads, UTC strip, and the two-column
+  story list. Run it to rebuild `entry.png`.
+- `main.py` — the deterministic entry runner. It copies the bundled
+  `entry.png` to an output directory and verifies the copy is
+  byte-identical (matching SHA-256) and within the 1 MiB limit.
+- `panels/` — the four lead illustrations (WebP), reused as supplied.
+
+## Reproduce
+
+```sh
+python3 compose.py        # rebuild entry.png from the panels
+python3 main.py           # copy entry.png to out/ and verify it
+python3 main.py -o out2   # a second run must produce identical bytes
+```
+
+Both `main.py` runs print the same SHA-256 digest.
+
+## License
+
+MIT — see `LICENSE`.
