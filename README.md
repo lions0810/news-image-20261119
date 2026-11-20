@@ -1,8 +1,8 @@
 # The World in One Day — 19 November 2026
 
-[![make.fun](https://make.fun/badge/news-image-20261119.svg)](https://make.fun/bounty/news-image-20261119)
-[![make.fun](https://make.fun/badge/news-image-20261119/entries.svg)](https://make.fun/bounty/news-image-20261119)
-[![make.fun](https://make.fun/badge/news-image-20261119/prize.svg)](https://make.fun/bounty/news-image-20261119)
+[![make.fun](https://make.fun/badge/news-image-20261119.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
+[![rank](https://make.fun/badge/news-image-20261119/lions0810/news-image-20261119/rank.svg)](https://make.fun/bounty/news-image-20261119/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
+[![reward](https://make.fun/badge/news-image-20261119/lions0810/news-image-20261119/reward.svg)](https://make.fun/bounty/news-image-20261119?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261119)
 
 A one-page newspaper front page for Thursday 19 November 2026, built
 for the [news-image-20261119](https://make.fun/bounty/news-image-20261119)
